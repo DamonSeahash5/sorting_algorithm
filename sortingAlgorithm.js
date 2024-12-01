@@ -40,20 +40,31 @@ if (X >= array[midpoint]) {
 
 let outputArray = []
 
-for (i in array) {
+ for (i in array) {
     if (testRange(i) == true) {
-    if (i >= array[midpoint]) {outputArray.push(i)};
+    if (i >= array[midpoint]) {outputArray.push(Number(i))};
     }
-    else if (i < array[midpoint]) {outputArray.push(i)};
+    else if (i < array[midpoint]) {outputArray.push(Number(i))};
     }
 
 console.log(outputArray)
 
-//If yes, output [nMax/2....nMax]
-//If No, output [nMin...nMax-1]
+// if (X in array) {console.log(X)}
 
-//Embed the loop in a function
+//Rewrite the loop to update the original array, using recursion to continue until the end condition (array.length) < 2
 
-//Use recursion to repeat the looping & testing until only two numbers are remaining in the array
+// while (outputArray.length >= 2);
+
+// while (array.length >2) {
+// for (i in array) {
+//     if (testRange(i) == true) {
+//         console.log(i)
+//     if (i >= array[midpoint]) {array.push(i)};
+//     }
+//     else if (i < array[midpoint]) {array.push(i)};
+//     }
+// }
+
+// console.log(array)
 
 //Test to find out which is the number
