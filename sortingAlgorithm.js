@@ -28,13 +28,26 @@ console.log("Midpoint is index position " + midpoint + " which is " + array[midp
 
 //Create a test to find the midpoint of the array and test if X is larger
 
+function testRange() {
 if (X >= array[midpoint]) {
-    console.log("X >= " + array[midpoint])
+    return true
 } else {
-    console.log("X < " + array[midpoint])
+    return false
+}
 }
 
 //Integrate the test into a loop
+
+let outputArray = []
+
+for (i in array) {
+    if (testRange(i) == true) {
+    if (i >= array[midpoint]) {outputArray.push(i)};
+    }
+    else if (i < array[midpoint]) {outputArray.push(i)};
+    }
+
+console.log(outputArray)
 
 //If yes, output [nMax/2....nMax]
 //If No, output [nMin...nMax-1]
