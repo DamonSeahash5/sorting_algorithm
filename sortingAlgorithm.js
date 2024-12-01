@@ -2,10 +2,10 @@
 
 //Define the number range 
 let nMin = 0
-let nMax = 10
+let nMax = 11
 
 //Define the secret number X for the algorithm to find
-let X = nMin + Math.floor(Math.random() * ((nMax + 1) - nMin));
+let X = nMin + Math.floor(Math.random() * ((nMax + 1) - nMin))
 console.log("Number X is " + X)
 
 
@@ -13,7 +13,28 @@ console.log("Number X is " + X)
 
 let array = []
 
-//Create a loop to find the midpoint of the array and test if X is larger
+//populate the array
+
+for (let i = nMin; i <= nMax; i++) {
+    array.push(i)}
+
+console.log(array)
+
+
+//create a variable to store the midpoint of the array
+let midpoint = Math.ceil((array.length -1) / 2)
+console.log("array.length is " + array.length)
+console.log("Midpoint is index position " + midpoint + " which is " + array[midpoint])
+
+//Create a test to find the midpoint of the array and test if X is larger
+
+if (X >= array[midpoint]) {
+    console.log("X >= " + array[midpoint])
+} else {
+    console.log("X < " + array[midpoint])
+}
+
+//Integrate the test into a loop
 
 //If yes, output [nMax/2....nMax]
 //If No, output [nMin...nMax-1]
